@@ -9,12 +9,7 @@ public class SaqueResponse {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date dataTransacao;
 
-	public Date getDataTransacao() {
-		return dataTransacao;
-	}
+	public Date getDataTransacao() {return dataTransacao;}
 
-	public void setDataTransacao(Date dataTransacao) {
-		this.dataTransacao = dataTransacao;
-	}
-
+	public void setDataTransacao(Date dataTransacao) {this.dataTransacao = dataTransacao;}
 }

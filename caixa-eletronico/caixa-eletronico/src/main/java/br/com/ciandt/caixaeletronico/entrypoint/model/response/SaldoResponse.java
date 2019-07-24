@@ -9,11 +9,7 @@ public class SaldoResponse {
 	@JsonFormat(shape = JsonFormat.Shape.OBJECT, pattern = "dd-MM-yyyy")
 	private Date dataTransacao;
 
-	public Date getDataTransacao() {
-		return dataTransacao;
-	}
+	public Date getDataTransacao() {return dataTransacao;}
 
-	public void setDataTransacao(Date dataTransacao) {
-		this.dataTransacao = dataTransacao;
-	}
+	public void setDataTransacao(Date dataTransacao) {this.dataTransacao = dataTransacao;}
 }
