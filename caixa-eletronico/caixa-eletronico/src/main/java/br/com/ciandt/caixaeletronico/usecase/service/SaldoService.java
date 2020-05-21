@@ -23,4 +23,15 @@ public class SaldoService {
 		
 		return null;
 	}
+	
+	public boolean validaDivida(boolean divida) throws Exception{
+		
+		if(divida == true) {
+			return saldoGateway.validaDividaTrue(divida);
+		}else if(divida == false) {
+			return saldoGateway.validaDividaFalse(divida);
+		}
+		
+		return false;
+	}
 }

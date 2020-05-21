@@ -31,9 +31,10 @@ public class SaldoResponseMapperTest {
 		saldoContaCorrenteDomain.setSaldo(new BigDecimal(4000.00));
 		saldoContaCorrenteDomain.setLimite(new BigDecimal(4000.00));
 		saldoContaCorrenteDomain.setDataTransacao(date);
+		saldoContaCorrenteDomain.setDivida(true);
 		
 		SaldoContaCorrenteResponse saldoContaCorrenteResponse = (SaldoContaCorrenteResponse) saldoResponseMapper
-				.toSaldoResponse(saldoContaCorrenteDomain);
+				.toSaldoResponse(saldoContaCorrenteDomain, false);
 		
 		assertEquals(saldoContaCorrenteResponse.getSaldo().doubleValue(),
 				saldoContaCorrenteDomain.getSaldo().doubleValue(), 0.01);
@@ -57,7 +58,7 @@ public class SaldoResponseMapperTest {
 		saldoContaPoupancaDomain.setDataTransacao(date);
 		
 		SaldoContaPoupancaResponse saldoContaPoupancaResponse = (SaldoContaPoupancaResponse) saldoResponseMapper
-				.toSaldoResponse(saldoContaPoupancaDomain);
+				.toSaldoResponse(saldoContaPoupancaDomain, false);
 		
 		assertEquals(saldoContaPoupancaResponse.getSaldo().doubleValue(),
 				saldoContaPoupancaDomain.getSaldo().doubleValue(), 0.01);

@@ -12,7 +12,7 @@ import br.com.ciandt.caixaeletronico.usecase.domain.SaldoDomain;
 @Component
 public class SaldoResponseMapper {
 	
-	public SaldoResponse toSaldoResponse(SaldoDomain saldoDomain) {
+	public SaldoResponse toSaldoResponse(SaldoDomain saldoDomain, boolean divida) {
 		
 		if (saldoDomain instanceof SaldoContaCorrenteDomain) {
 			SaldoContaCorrenteResponse saldoContaCorrenteResponse = new SaldoContaCorrenteResponse();
@@ -20,6 +20,8 @@ public class SaldoResponseMapper {
 			saldoContaCorrenteResponse.setSaldo(((SaldoContaCorrenteDomain)saldoDomain).getSaldo());
 			saldoContaCorrenteResponse.setLimite(((SaldoContaCorrenteDomain)saldoDomain).getLimite());
 			saldoContaCorrenteResponse.setDataTransacao(((SaldoContaCorrenteDomain)saldoDomain).getDataTransacao());
+			saldoContaCorrenteResponse.setDivida(saldoDomain.isDivida());
+			saldoContaCorrenteResponse.setPermissaoCompras(saldoDomain.isPermissaoCompras());
 			
 			return saldoContaCorrenteResponse;
 		}

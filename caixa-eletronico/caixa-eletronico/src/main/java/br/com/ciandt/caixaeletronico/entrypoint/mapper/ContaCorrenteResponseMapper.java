@@ -15,6 +15,8 @@ public class ContaCorrenteResponseMapper {
 		contaCorrenteResponse.setDataTransacao(saldoDomain.getDataTransacao());
 		contaCorrenteResponse.setLimite(saldoDomain.getLimite());
 		contaCorrenteResponse.setSaldo(saldoDomain.getSaldo());
+		contaCorrenteResponse.setDivida(saldoDomain.isDivida());
+		contaCorrenteResponse.setPermissaoCompras(saldoDomain.isPermissaoCompras());
 		
 		return contaCorrenteResponse;
 	}

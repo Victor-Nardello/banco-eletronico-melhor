@@ -3,7 +3,9 @@ package br.com.ciandt.caixaeletronico.dataprovider.implementation;
 import java.math.BigDecimal;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
 
 import br.com.ciandt.caixaeletronico.dataprovider.entity.SaldoEntity;
 import br.com.ciandt.caixaeletronico.dataprovider.mapper.SaldoDataProviderDomainMapper;
@@ -23,8 +25,9 @@ public class SaldoImplementation implements SaldoGateway {
 		saldoEntity.setAgencia("2468");
 		saldoEntity.setConta("101214");
 		saldoEntity.setTipoConta("CC");
-		saldoEntity.setSaldo(new BigDecimal(3000.00));
+		saldoEntity.setSaldo(new BigDecimal(30000.00));
 		saldoEntity.setLimite(new BigDecimal(400.00));
+		saldoEntity.setDivida(false);
 
 		return saldoDataProviderDomainMapper.toSaldoContaCorrenteDomain(saldoEntity);
 	}
@@ -39,5 +42,28 @@ public class SaldoImplementation implements SaldoGateway {
 		saldoEntity.setSaldo(new BigDecimal(1000.00));
 
 		return saldoDataProviderDomainMapper.toSaldoContaPoupancaDomain(saldoEntity);
+	}
+	
+	@Override
+	public boolean validaDividaTrue(boolean divida) throws ResponseStatusException {
+		
+		SaldoEntity saldoEntity = new SaldoEntity();
+		
+		if(divida == true) {
+			saldoEntity.setPermissaoCompras(false);
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Esta endividado! Pague suas contas para fazer compras.");
+		}
+		return divida;
+	}
+	
+	@Override
+	public boolean validaDividaFalse(boolean divida) throws ResponseStatusException {
+		
+		SaldoEntity saldoEntity = new SaldoEntity();
+		
+		if(divida == false) {
+			saldoEntity.setPermissaoCompras(true);
+		}
+		return divida;
 	}
 }

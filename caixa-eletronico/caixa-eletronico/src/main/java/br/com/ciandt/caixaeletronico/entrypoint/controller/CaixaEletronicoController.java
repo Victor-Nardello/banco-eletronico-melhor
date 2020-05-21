@@ -42,15 +42,10 @@ public class CaixaEletronicoController {
 		
 		SaldoDomain saldoDomain = saldoService.getSaldo(saldoRequest.getTipoConta());
 		
-		SaldoResponse saldoResponse = saldoResponseMapper.toSaldoResponse(saldoDomain);
+		boolean divida = saldoService.validaDivida(false);
+		
+		SaldoResponse saldoResponse = saldoResponseMapper.toSaldoResponse(saldoDomain, divida);
 		
 		return saldoResponse;
 	}
-	
-//	@ResponseBody
-//	public void getSaque(@RequestParam(value = "saldo") String conta,
-//						 @RequestParam(value = "limite") String limite,
-//						 @RequestParam(value = "tipo_conta") String tipoConta,
-//						 @RequestParam(value = "valor_saque") String valorSaque) {
-//	}
 }

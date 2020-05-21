@@ -18,6 +18,8 @@ public class SaldoDataProviderDomainMapper {
 		saldoContaCorrenteDomain.setLimite(saldoEntity.getLimite());
 		saldoContaCorrenteDomain.setSaldo(saldoEntity.getSaldo());
 		saldoContaCorrenteDomain.setDataTransacao(new Date());
+		saldoContaCorrenteDomain.setDivida(saldoEntity.isDivida());
+		saldoContaCorrenteDomain.setPermissaoCompras(saldoEntity.isPermissaoCompras());
 		
 		return saldoContaCorrenteDomain;
 	}
@@ -28,6 +30,8 @@ public class SaldoDataProviderDomainMapper {
 		
 		saldoContaPoupancaDomain.setSaldo(saldoEntity.getSaldo());
 		saldoContaPoupancaDomain.setDataTransacao(new Date());
+		saldoContaPoupancaDomain.setDivida(saldoEntity.isDivida());
+		saldoContaPoupancaDomain.setPermissaoCompras(saldoEntity.isPermissaoCompras());
 		
 		return saldoContaPoupancaDomain;
 	}
