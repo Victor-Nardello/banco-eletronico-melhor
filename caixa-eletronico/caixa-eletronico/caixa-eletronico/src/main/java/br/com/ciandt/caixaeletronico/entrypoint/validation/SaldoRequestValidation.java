@@ -21,7 +21,7 @@ public class SaldoRequestValidation {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Campo tipo_conta obrigatorio");
 		}
 
-		if (!tipoConta.equals("CC") && !tipoConta.equals("CP")) {
+		if (!"CC".equals(tipoConta) && !"CP".equals(tipoConta)) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Campo tipo_conta invalido");
 		}
 	}

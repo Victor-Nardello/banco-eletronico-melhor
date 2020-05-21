@@ -15,8 +15,8 @@ public class SaldoResponseMapper {
 	public SaldoResponse toSaldoResponse(SaldoDomain saldoDomain) {
 		
 		if (saldoDomain instanceof SaldoContaCorrenteDomain) {
-			SaldoContaCorrenteResponse saldoContaCorrenteResponse = new SaldoContaCorrenteResponse();
 			
+			SaldoContaCorrenteResponse saldoContaCorrenteResponse = new SaldoContaCorrenteResponse();
 			saldoContaCorrenteResponse.setSaldo(((SaldoContaCorrenteDomain)saldoDomain).getSaldo());
 			saldoContaCorrenteResponse.setLimite(((SaldoContaCorrenteDomain)saldoDomain).getLimite());
 			saldoContaCorrenteResponse.setDataTransacao(((SaldoContaCorrenteDomain)saldoDomain).getDataTransacao());
@@ -26,14 +26,13 @@ public class SaldoResponseMapper {
 		}
 		
 		if(saldoDomain instanceof SaldoContaPoupancaDomain) {
-			SaldoContaPoupancaResponse saldoContaPoupancaResponse = new SaldoContaPoupancaResponse();
 			
+			SaldoContaPoupancaResponse saldoContaPoupancaResponse = new SaldoContaPoupancaResponse();
 			saldoContaPoupancaResponse.setSaldo(((SaldoContaPoupancaDomain)saldoDomain).getSaldo());
 			saldoContaPoupancaResponse.setDataTransacao(((SaldoContaPoupancaDomain)saldoDomain).getDataTransacao());
 			
 			return saldoContaPoupancaResponse;
 		}
-		
 		return null;
 	}
 }

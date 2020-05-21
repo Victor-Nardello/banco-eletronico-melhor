@@ -8,19 +8,17 @@ import br.com.ciandt.caixaeletronico.usecase.gateway.SaldoGateway;
 
 @Service
 public class SaldoService {
-	
+
 	@Autowired
 	SaldoGateway saldoGateway;
-	
+
 	public SaldoDomain getSaldo(String tipoConta) {
-		
-		if (tipoConta.equals("CC")) {
+
+		if ("CC".equals(tipoConta)) {
 			return saldoGateway.getSaldoContaCorrente();
-			
-		} else if (tipoConta.equals("CP")) {
-			return saldoGateway.getSaldoContaPoupanca();	
+		} else if ("CP".equals(tipoConta)) {
+			return saldoGateway.getSaldoContaPoupanca();
 		}
-		
 		return null;
 	}
 }

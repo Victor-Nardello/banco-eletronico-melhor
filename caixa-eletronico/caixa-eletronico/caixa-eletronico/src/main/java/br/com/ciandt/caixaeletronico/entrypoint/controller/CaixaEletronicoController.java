@@ -16,6 +16,7 @@ import br.com.ciandt.caixaeletronico.usecase.domain.SaldoDomain;
 import br.com.ciandt.caixaeletronico.usecase.service.SaldoService;
 
 @RestController
+@RequestMapping(value = "/caixa-eletronico", method = RequestMethod.GET)
 public class CaixaEletronicoController {
 	
 	@Autowired
@@ -31,7 +32,6 @@ public class CaixaEletronicoController {
 	SaldoResponseMapper saldoResponseMapper;
 	
 	@ResponseBody
-	@RequestMapping(value = "/caixa-eletronico", method = RequestMethod.GET)
 	public SaldoResponse getSaldo(@RequestParam (value = "agencia") Integer agencia,
 			@RequestParam (value = "conta") Integer conta,
 			@RequestParam (value = "tipo_conta") String tipoConta) throws Exception {

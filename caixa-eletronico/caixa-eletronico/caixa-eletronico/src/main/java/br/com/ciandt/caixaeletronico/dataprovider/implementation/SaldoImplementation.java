@@ -19,7 +19,6 @@ public class SaldoImplementation implements SaldoGateway {
 	@Override
 	public SaldoDomain getSaldoContaCorrente() {
 		SaldoEntity saldoEntity = new SaldoEntity();
-
 		saldoEntity.setAgencia("2468");
 		saldoEntity.setConta("101214");
 		saldoEntity.setTipoConta("CC");
@@ -36,11 +35,10 @@ public class SaldoImplementation implements SaldoGateway {
 	@Override
 	public SaldoDomain getSaldoContaPoupanca() {
 		SaldoEntity saldoEntity = new SaldoEntity();
-
 		saldoEntity.setAgencia("1234");
 		saldoEntity.setConta("123456");
 		saldoEntity.setTipoConta("CP");
-		saldoEntity.setSaldo(new BigDecimal(Math.random()));
+		saldoEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 
 		return saldoDataProviderDomainMapper.toSaldoContaPoupancaDomain(saldoEntity);
 	}
