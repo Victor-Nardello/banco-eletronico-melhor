@@ -16,7 +16,7 @@ public class SaldoService {
 
 		if ("CC".equals(tipoConta)) {
 			return saldoGateway.getSaldoContaCorrente();
-		} else if ("CP".equals(tipoConta)) {
+		} else if("CP".equals(tipoConta)) {
 			return saldoGateway.getSaldoContaPoupanca();
 		}
 		return null;

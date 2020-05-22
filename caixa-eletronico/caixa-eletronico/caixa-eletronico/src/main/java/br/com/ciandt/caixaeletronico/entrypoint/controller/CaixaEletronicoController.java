@@ -74,7 +74,7 @@ public class CaixaEletronicoController {
 		
 		taxaJurosRequestValidation.validar(agencia, conta, tipoConta, taxaJuros);
 		TaxaRequest taxaRequest =  taxaJurosRequestMapper.requestMapper(agencia, conta, tipoConta, taxaJuros);
-		TaxaDomain taxaDomain = taxaService.getTaxaJuros(taxaRequest.getConta());
+		TaxaDomain taxaDomain = taxaService.getTaxaJuros(taxaRequest.getTipoConta(), taxaRequest.getAgencia());
 		TaxaJurosResponse taxaJurosResponse = taxaJurosResponseMapper.toTaxaJurosResponse(taxaDomain);
 		
 		return taxaJurosResponse;

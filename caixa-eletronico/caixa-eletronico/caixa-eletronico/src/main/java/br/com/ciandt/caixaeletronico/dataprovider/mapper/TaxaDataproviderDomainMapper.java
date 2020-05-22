@@ -9,7 +9,7 @@ import br.com.ciandt.caixaeletronico.usecase.domain.TaxaJurosCCDomain;
 import br.com.ciandt.caixaeletronico.usecase.domain.TaxaJurosCPDomain;
 
 @Component
-public class TaxaDataproviderDomainMapper {
+public class TaxaDataproviderDomainMapper{
 
 	public TaxaJurosCCDomain getTaxaJurosCC(TaxaJurosEntity taxaJurosEntity) {
 
