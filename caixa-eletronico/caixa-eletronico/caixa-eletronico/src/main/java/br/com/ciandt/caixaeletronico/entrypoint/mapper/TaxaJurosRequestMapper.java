@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import br.com.ciandt.caixaeletronico.entrypoint.model.request.TaxaRequest;
 
 @Component
-public class TaxaJurosRequestMappeer {
+public class TaxaJurosRequestMapper {
 	
 	public TaxaRequest requestMapper(Integer agencia, Integer conta, String tipoConta, BigDecimal taxaJuros) {
 		

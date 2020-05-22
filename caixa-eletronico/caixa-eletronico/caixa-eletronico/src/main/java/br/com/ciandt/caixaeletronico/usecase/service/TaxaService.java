@@ -14,7 +14,7 @@ public class TaxaService {
 	@Autowired
 	TaxaJurosImplementation taxaJurosImplementation;
 	
-	public TaxaDomain getTaxaJuros(BigDecimal taxaJuros) {
+	public TaxaDomain getTaxaJuros(String taxaJuros) {
 		
 		if(taxaJuros.equals("CC") && taxaJuros.equals(new BigDecimal(1111))) {
 			return taxaJurosImplementation.getTaxaJurosCC15();
