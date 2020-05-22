@@ -2,8 +2,11 @@ package br.com.ciandt.caixaeletronico.entrypoint.mapper;
 
 import java.math.BigDecimal;
 
+import org.springframework.stereotype.Component;
+
 import br.com.ciandt.caixaeletronico.entrypoint.model.request.TaxaRequest;
 
+@Component
 public class TaxaJurosRequestMappeer {
 	
 	public TaxaRequest requestMapper(Integer agencia, Integer conta, String tipoConta, BigDecimal taxaJuros) {
