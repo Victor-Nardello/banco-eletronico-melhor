@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SaldoEntity {
+public class TaxaJurosEntity {
 	
 	private String agencia;
 	private String conta;
@@ -15,4 +15,5 @@ public class SaldoEntity {
 	private BigDecimal saldo;
 	private BigDecimal limite;
 	private boolean divida;
+	private BigDecimal taxaJuros;
 }

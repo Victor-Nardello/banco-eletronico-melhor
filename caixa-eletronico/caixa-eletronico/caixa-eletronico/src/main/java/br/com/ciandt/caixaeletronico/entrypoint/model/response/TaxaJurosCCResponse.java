@@ -1,4 +1,4 @@
-package br.com.ciandt.caixaeletronico.dataprovider.entity;
+package br.com.ciandt.caixaeletronico.entrypoint.model.response;
 
 import java.math.BigDecimal;
 
@@ -7,12 +7,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SaldoEntity {
+public class TaxaJurosCCResponse extends TaxaJurosResponse{
 	
-	private String agencia;
-	private String conta;
-	private String tipoConta;
 	private BigDecimal saldo;
 	private BigDecimal limite;
 	private boolean divida;
+	private BigDecimal taxaJuros;
 }
