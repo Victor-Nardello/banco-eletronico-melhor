@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: caixa-eletronico
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vnardello
+Implementation-Vendor-Id: br.com.ciandt
+Build-Jdk: 1.8.0_251
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/caixa-eletronico
+Created-By: Maven Integration for Eclipse
+
