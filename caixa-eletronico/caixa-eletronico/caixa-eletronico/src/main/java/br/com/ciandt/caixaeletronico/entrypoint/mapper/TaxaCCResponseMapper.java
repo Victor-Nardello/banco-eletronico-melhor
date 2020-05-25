@@ -16,6 +16,7 @@ public class TaxaCCResponseMapper {
 		taxaJurosCCResponse.setLimite(taxaDomain.getLimite());
 		taxaJurosCCResponse.setSaldo(taxaDomain.getSaldo());
 		taxaJurosCCResponse.setTaxaJuros(taxaDomain.getTaxaJuros());
+		taxaJurosCCResponse.setSaldoJurosCalculado(taxaDomain.getSaldoJurosCalculado());
 
 		return taxaJurosCCResponse;
 	}

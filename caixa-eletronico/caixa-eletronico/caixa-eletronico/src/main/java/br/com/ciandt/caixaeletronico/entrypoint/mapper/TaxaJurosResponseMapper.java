@@ -22,6 +22,7 @@ public class TaxaJurosResponseMapper {
 			taxaJurosCCResponse.setLimite(taxaDomain.getLimite());
 			taxaJurosCCResponse.setSaldo(taxaDomain.getSaldo());
 			taxaJurosCCResponse.setTaxaJuros(taxaDomain.getTaxaJuros());
+			taxaJurosCCResponse.setSaldoJurosCalculado(((TaxaJurosCCDomain) taxaDomain).getSaldoJurosCalculado());
 			
 			return taxaJurosCCResponse;
 		}
@@ -34,6 +35,7 @@ public class TaxaJurosResponseMapper {
 			taxaJurosCPResponse.setLimite(taxaDomain.getLimite());
 			taxaJurosCPResponse.setSaldo(taxaDomain.getSaldo());
 			taxaJurosCPResponse.setTaxaJuros(taxaDomain.getTaxaJuros());
+			taxaJurosCPResponse.setSaldoJurosCalculado(((TaxaJurosCPDomain) taxaDomain).getSaldoJurosCalculado());
 			
 			return taxaJurosCPResponse;
 		}

@@ -19,6 +19,7 @@ public class TaxaDataproviderDomainMapper{
 		taxaJurosCCDomain.setSaldo(taxaJurosEntity.getSaldo());
 		taxaJurosCCDomain.setDivida(taxaJurosEntity.isDivida());
 		taxaJurosCCDomain.setTaxaJuros(taxaJurosEntity.getTaxaJuros());
+		taxaJurosCCDomain.setSaldoJurosCalculado(taxaJurosEntity.getSaldoJurosCalculado());
 
 		return taxaJurosCCDomain;
 	}
@@ -31,6 +32,7 @@ public class TaxaDataproviderDomainMapper{
 		taxaJurosCPDomain.setSaldo(taxaJurosEntity.getSaldo());
 		taxaJurosCPDomain.setDivida(taxaJurosEntity.isDivida());
 		taxaJurosCPDomain.setTaxaJuros(taxaJurosEntity.getTaxaJuros());
+		taxaJurosCPDomain.setSaldoJurosCalculado(taxaJurosEntity.getSaldoJurosCalculado());
 
 		return taxaJurosCPDomain;
 	}

@@ -26,6 +26,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(6000));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(15));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 15.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCC(taxaJurosEntity);
 	}
@@ -39,6 +43,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(13000));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(10));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 10.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCC(taxaJurosEntity);
 	}
@@ -52,6 +60,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(8000));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(20));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 20.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCC(taxaJurosEntity);
 	}
@@ -65,6 +77,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(12000));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(5));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 5.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCP(taxaJurosEntity);
 	}
@@ -78,6 +94,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(4000));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(3));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 3.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCP(taxaJurosEntity);
 	}
@@ -91,6 +111,10 @@ public class TaxaJurosImplementation implements TaxaGateway {
 		taxaJurosEntity.setSaldo(new BigDecimal(Math.floor(Math.random()*9999 - 1) + -999));
 		taxaJurosEntity.setLimite(new BigDecimal(6700));
 		taxaJurosEntity.setTaxaJuros(new BigDecimal(8));
+		
+		double saldo = taxaJurosEntity.getSaldo().doubleValue();
+		taxaJurosEntity.setSaldoJurosCalculado(new BigDecimal(Math.floor(
+				taxaJurosEntity.getSaldo().doubleValue() + (saldo * 8.0) / 100)));
 
 		return taxaDataproviderDomainMapper.getTaxaJurosCP(taxaJurosEntity);
 	}
