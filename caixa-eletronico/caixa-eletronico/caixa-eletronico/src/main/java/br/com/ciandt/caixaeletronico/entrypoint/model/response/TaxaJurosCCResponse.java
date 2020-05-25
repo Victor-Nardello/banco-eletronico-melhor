@@ -13,4 +13,5 @@ public class TaxaJurosCCResponse extends TaxaJurosResponse{
 	private BigDecimal limite;
 	private boolean divida;
 	private BigDecimal taxaJuros;
+	private BigDecimal saldoJurosCalculado;
 }

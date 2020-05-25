@@ -11,4 +11,5 @@ public class TaxaJurosCPDomain extends TaxaDomain{
 	
 	private BigDecimal saldo;
 	private BigDecimal taxaJuros;
+	private BigDecimal saldoJurosCalculado;
 }
