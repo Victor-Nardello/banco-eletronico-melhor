@@ -11,7 +11,6 @@ public class ContaPoupancaResponseMapper {
 	public ContaPoupancaResponse toResponse(SaldoDomain saldoDomain) {
 		
 		ContaPoupancaResponse contaPoupancaResponse = new ContaPoupancaResponse();
-		
 		contaPoupancaResponse.setDataTransacao(saldoDomain.getDataTransacao());
 		contaPoupancaResponse.setSaldo(saldoDomain.getSaldo());
 		

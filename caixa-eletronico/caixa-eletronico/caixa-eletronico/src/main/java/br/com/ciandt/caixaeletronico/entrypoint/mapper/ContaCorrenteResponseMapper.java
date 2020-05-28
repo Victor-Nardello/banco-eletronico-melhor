@@ -11,7 +11,6 @@ public class ContaCorrenteResponseMapper {
 	public ContaCorrenteResponse toCorrenteResponse(SaldoDomain saldoDomain) {
 		
 		ContaCorrenteResponse contaCorrenteResponse = new ContaCorrenteResponse();
-		
 		contaCorrenteResponse.setDataTransacao(saldoDomain.getDataTransacao());
 		contaCorrenteResponse.setLimite(saldoDomain.getLimite());
 		contaCorrenteResponse.setSaldo(saldoDomain.getSaldo());

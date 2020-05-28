@@ -19,7 +19,7 @@ public class TaxaJurosRequestValidation {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Campo conta obrigatorio");
 		} 
 		
-		if (tipoConta.equals("")) {
+		if ("".equals(tipoConta)) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Campo tipo_conta obrigatorio");
 		}
 		
