@@ -79,4 +79,19 @@ public class CaixaEletronicoController {
 		
 		return taxaJurosResponse;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/caixa-eletronico/taxa/post", method = RequestMethod.POST)
+	public TaxaJurosResponse taxaJurosPost(@RequestParam (value = "agencia") Integer agencia,
+			@RequestParam (value = "conta") Integer conta,
+			@RequestParam (value = "tipo_conta") String tipoConta,
+			@RequestParam (value = "taxa_juros") BigDecimal taxaJuros) throws Exception {
+		
+		taxaJurosRequestValidation.validar(agencia, conta, tipoConta, taxaJuros);
+		TaxaRequest taxaRequest =  taxaJurosRequestMapper.requestMapper(agencia, conta, tipoConta, taxaJuros);
+		TaxaDomain taxaDomain = taxaService.getTaxaJuros(taxaRequest.getTipoConta(), taxaRequest.getAgencia());
+		TaxaJurosResponse taxaJurosResponse = taxaJurosResponseMapper.toTaxaJurosResponse(taxaDomain);
+		
+		return taxaJurosResponse;
+	}
 }

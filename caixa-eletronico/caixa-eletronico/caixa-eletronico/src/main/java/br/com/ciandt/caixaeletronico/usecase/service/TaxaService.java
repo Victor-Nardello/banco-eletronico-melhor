@@ -15,19 +15,19 @@ public class TaxaService {
 	public TaxaDomain getTaxaJuros(String tipoConta, String agencia) {
 		
 		if("CC".equals(tipoConta) && agencia.equals("1111")) {
-			return taxaGateway.getTaxaJurosCC15();
+			return taxaGateway.getTaxaJuros(15);
 		}else if("CC".equals(tipoConta) && agencia.equals("2222")) {
-			return taxaGateway.getTaxaJurosCC10();
+			return taxaGateway.getTaxaJuros(10);
 		}else if("CC".equals(tipoConta) && !agencia.equals("1111") && !agencia.equals("2222")) {
-			return taxaGateway.getTaxaJurosCC20();
+			return taxaGateway.getTaxaJuros(20);
 		}
 		
 		if("CP".equals(tipoConta) && agencia.equals("1111")) {
-			return taxaGateway.getTaxaJurosCP5();
+			return taxaGateway.getTaxaJuros(5);
 		}else if("CP".equals(tipoConta) && agencia.equals("2222")) {
-			return taxaGateway.getTaxaJurosCP3();
+			return taxaGateway.getTaxaJuros(3);
 		}else if("CP".equals(tipoConta) && !agencia.equals("1111") && !agencia.equals("2222")) {
-			return taxaGateway.getTaxaJurosCP8();
+			return taxaGateway.getTaxaJuros(8);
 		}
 		return null;
 	}
